@@ -1,5 +1,6 @@
 package com.company.cliente.controller;
 
+import com.company.cliente.controller.dto.ClienteDTO;
 import com.company.cliente.model.Cliente;
 import com.company.cliente.service.impl.ClienteServiceImpl;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +18,8 @@ public class ClienteController {
     }
 
     @PostMapping
-    public Cliente salvar(@RequestBody Cliente cliente){
-        return service.salvar(cliente);
+    public Cliente salvar(@RequestBody ClienteDTO dto){
+        return service.salvar(new Cliente(dto.getNome()));
     }
 
     @GetMapping
