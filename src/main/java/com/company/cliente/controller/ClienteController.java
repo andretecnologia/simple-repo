@@ -1,6 +1,6 @@
 package com.company.cliente.controller;
 
-import com.company.cliente.controller.dto.ClienteDTO;
+import com.company.cliente.dto.ClienteDTO;
 import com.company.cliente.model.Cliente;
 import com.company.cliente.service.impl.ClienteServiceImpl;
 import org.springframework.web.bind.annotation.*;

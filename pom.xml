@@ -17,6 +17,7 @@
         <java.version>11</java.version>
         <sonar.exclusions>
             **/model/**,
+            **/dto/**,
             **/ClienteApplication*
         </sonar.exclusions>
         <sonar.projectKey>andretecnologia_simple-repo</sonar.projectKey>
