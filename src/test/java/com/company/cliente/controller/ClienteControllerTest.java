@@ -1,10 +1,8 @@
 package com.company.cliente.controller;
 
 import com.company.cliente.model.Cliente;
-import com.company.cliente.repository.ClienteRepository;
 import com.company.cliente.service.impl.ClienteServiceImpl;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -27,19 +25,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest
 class ClienteControllerTest {
 
-    @Autowired
-    ClienteServiceImpl service;
-
     @MockBean
-    ClienteRepository repository;
+    ClienteServiceImpl service;
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     void clientePOSTControllerTest() throws Exception {
-
-        when(repository.save(any(Cliente.class))).thenReturn(mockCliente());
 
         when(service.salvar(any(Cliente.class))).thenReturn(mockCliente());
 
